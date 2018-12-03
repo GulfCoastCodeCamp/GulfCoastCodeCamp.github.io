@@ -1416,7 +1416,10 @@
           <div class="col-lg-7 col-md-12 col-xs-12">
             <div class="container-form wow fadeInLeft" data-wow-delay="0.2s">
               <div class="form-wrapper">
-                <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator" netlify>
+                <form role="form" method="post" id="contactForm" name="gc-contact-form" data-toggle="validator" action="/success/" netlify>
+                  <p class=“u-visually-hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                  </p>
                   <div class="row">
                     <div class="col-md-6 form-line">
                       <div class="form-group">
@@ -1440,6 +1443,7 @@
                       <div class="form-group">
                         <textarea class="form-control" rows="4" id="message" name="message" required data-error="Write your message"></textarea>
                       </div>
+                      <div data-netlify-recaptcha></div>
                       <div class="form-submit">
                         <button type="submit" class="btn btn-common" id="form-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Us Now</button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
